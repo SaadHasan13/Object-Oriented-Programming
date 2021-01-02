@@ -23,6 +23,8 @@ Class TicketMachine
         Me.Amount = 0
     End Sub
     Public Sub PrintTicket()
+        Dim NameOfPerson As String
+        Dim TimeOfArrival As Date
         If ValidCoin(Amount = "10" Or Amount = "20" Or Amount = "50" Or Amount = "100") Then
             Me.Amount = 0
         End If
