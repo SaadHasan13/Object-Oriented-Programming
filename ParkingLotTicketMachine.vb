@@ -25,6 +25,8 @@ Class TicketMachine
     Public Sub PrintTicket()
         Dim NameOfPerson As String
         Dim TimeOfArrival As Date
+         NameOfPerson = Console.ReadLine()
+        TimeOfArrival = Console.ReadLine()
         If ValidCoin(Amount = "10" Or Amount = "20" Or Amount = "50" Or Amount = "100") Then
             Me.Amount = 0
         End If
@@ -54,6 +56,7 @@ Class TicketMachine
             Amount = Console.ReadLine()
             If Amount = 0 Then
                 Console.WriteLine("No coins inserted")
+                PrintTicket()
             Else
                 SetState("Accepted")
                 PrintTicket()
